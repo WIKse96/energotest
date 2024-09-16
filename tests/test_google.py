@@ -5,10 +5,11 @@ import pytest
 from POM.search_restults import SearchResultsPage
 
 
-# def test_main_page(main_page: MainPage) -> None:
-#     # Otwarcie strony do testów
-#     main_page.goto_link()
-#     main_page.assertions()
+ def test_main_page(main_page: MainPage) -> None:
+     # Otwarcie strony do testów
+     main_page.goto_link()
+     # Wymagane asercje
+     main_page.assertions()
 
 
 def test_search(main_page: MainPage, search_results_page: SearchResultsPage) -> None:
@@ -17,5 +18,5 @@ def test_search(main_page: MainPage, search_results_page: SearchResultsPage) -> 
     # Otwarcie strony do testów
     main_page.goto_link()
     main_page.search_text(text_to_search)
-    # time.sleep(1)
+    # Asercje wyników
     search_results_page.verify_results()
